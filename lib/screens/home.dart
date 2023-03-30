@@ -1,3 +1,4 @@
+import 'package:bbb/screens/ticket_view.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -66,12 +67,23 @@ class Home extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children:  [
                       Text("Upcoming Flights",style: Styles.headlinestyle2,),
-                      Text("View all", style: Styles.textsyle.copyWith(color: Styles.primarycolor),),
+                      InkWell(
+                        onTap: (){
+                          print("tapped");
+                        },
+                          child:Text("View all", style: Styles.textsyle.copyWith(color: Styles.primarycolor),)
+                      ),
+
                     ],
+
                   )
+
                 ],
               )
-          )
+          ),
+          const Gap(20),
+          const TicketView(),
+
         ],
       )
     );
