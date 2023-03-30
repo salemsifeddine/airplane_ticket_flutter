@@ -1,4 +1,5 @@
 import 'package:bbb/reusable/thickcont.dart';
+import 'package:bbb/utils/AppLayout.dart';
 import 'package:bbb/utils/style.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -9,7 +10,10 @@ class TicketView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = AppLayout.getSize(context);
     return SizedBox(
+      width: size.width*0.90,
+      height: 200,
 
       child: Container(
         margin:const EdgeInsets.only(left:16),

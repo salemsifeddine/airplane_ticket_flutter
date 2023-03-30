@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
 import '../utils/style.dart';
+import 'hotel_view.dart';
 
 
 class Home extends StatelessWidget {
@@ -15,6 +16,7 @@ class Home extends StatelessWidget {
     return  Scaffold(
      backgroundColor: Styles.bgcolor,
       body: ListView(
+
         children: [
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -82,7 +84,51 @@ class Home extends StatelessWidget {
               )
           ),
           const Gap(20),
-          const TicketView(),
+
+        SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          padding: const EdgeInsets.only(right:20),
+          child: Row(
+            children: const [
+              TicketView(),
+              TicketView(),
+            ],
+          ),
+        ),
+          const Gap(20),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children:  [
+                Text("Hotels",style: Styles.headlinestyle2,),
+                InkWell(
+                    onTap: (){
+                      print("tapped 2");
+                    },
+                    child:Text("View all", style: Styles.textsyle.copyWith(color: Styles.primarycolor),)
+                ),
+
+              ],
+
+            ),
+          ),
+          const Gap(20),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+
+            padding: const EdgeInsets.only(right:20,left: 10),
+
+            child: Row(
+              children: const [
+                HotelView(),
+                HotelView(),
+                HotelView(),
+                HotelView()
+
+              ],
+            ),
+          ),
 
         ],
       )
