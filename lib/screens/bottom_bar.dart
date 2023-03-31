@@ -1,6 +1,7 @@
 // ignore_for_file: camel_case_types
 
 import 'package:bbb/screens/home.dart';
+import 'package:bbb/screens/search_screen.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -20,8 +21,8 @@ class _Bottom_barState extends State<Bottom_bar> {
     });
   }
   static final List<Widget>_widgetOptions=<Widget>[
-  Home(),
-  const Text("search"),
+  const Home(),
+  const SearchScreen(),
   const Text("tickets"),
   const Text("person")
   ];

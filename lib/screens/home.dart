@@ -1,4 +1,6 @@
+import 'package:bbb/screens/search_screen.dart';
 import 'package:bbb/screens/ticket_view.dart';
+import 'package:bbb/utils/App_info.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -89,10 +91,7 @@ class Home extends StatelessWidget {
           scrollDirection: Axis.horizontal,
           padding: const EdgeInsets.only(right:20),
           child: Row(
-            children: const [
-              TicketView(),
-              TicketView(),
-            ],
+            children: airTicket.map((singleTicket) => TicketView(ticket: singleTicket)).toList()
           ),
         ),
           const Gap(20),
@@ -120,15 +119,10 @@ class Home extends StatelessWidget {
             padding: const EdgeInsets.only(right:20,left: 10),
 
             child: Row(
-              children: const [
-                HotelView(),
-                HotelView(),
-                HotelView(),
-                HotelView()
-
-              ],
+              children:hotelList.map((singelHotel) => HotelView(hotel: singelHotel)).toList()
             ),
           ),
+
 
         ],
       )
