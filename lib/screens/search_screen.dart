@@ -195,7 +195,7 @@ class SearchScreen extends StatelessWidget {
                  ))
                   ],
                 ),
-                    Gap(12),
+                    const Gap(12),
                     Container(
                       height: 164,
                       width: size.width*0.44,

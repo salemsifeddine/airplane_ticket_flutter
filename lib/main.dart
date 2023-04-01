@@ -28,7 +28,39 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primaryColor: primary,
       ),
-      home: const Bottom_bar(),
+      home: const Splach(),
+    );
+  }
+}
+
+
+class Splach extends StatefulWidget {
+  const Splach({Key? key}) : super(key: key);
+
+  @override
+  State<Splach> createState() => _Splach();
+}
+
+class _Splach extends State<Splach> {
+  @override
+  void initState(){
+    super.initState();
+    Future.delayed(const Duration(seconds: 1),(){
+      Navigator.pushReplacement(context, MaterialPageRoute(builder:(context)=> const Bottom_bar()));
+    });
+
+  }
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset("assets/images/flying-airplane.gif",width: 170,height: 170,)
+          ],
+        ),
+      ),
     );
   }
 }

@@ -2,6 +2,7 @@
 
 import 'package:bbb/screens/home.dart';
 import 'package:bbb/screens/search_screen.dart';
+import 'package:bbb/screens/tickets_tab.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -23,7 +24,7 @@ class _Bottom_barState extends State<Bottom_bar> {
   static final List<Widget>_widgetOptions=<Widget>[
   const Home(),
   const SearchScreen(),
-  const Text("tickets"),
+  const TicketTab(),
   const Text("person")
   ];
   @override
