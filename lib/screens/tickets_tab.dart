@@ -15,9 +15,11 @@ class TicketTab extends StatelessWidget {
     final size = AppLayout.getSize(context);
 
     return ListView(
+      scrollDirection: Axis.vertical,
+
       padding: const EdgeInsets.symmetric(vertical: 25,horizontal: 20),
       children:   [
-        const Gap(30),
+        const Gap(40),
         Text("Tickets", style: Styles.headlinestyle1.copyWith(fontSize: 35),),
         const Gap(20),
         Container(
@@ -66,7 +68,7 @@ class TicketTab extends StatelessWidget {
         const Gap(20),
         Container(
             padding: EdgeInsets.only(right: 10),
-            child: TicketView(ticket: airTicket[0]))
+            child: TicketView(ticket: airTicket[0],ticketbar: true,))
 
       ],
     );

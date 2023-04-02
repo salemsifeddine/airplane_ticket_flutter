@@ -2,7 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ThicCont extends StatelessWidget {
-  const ThicCont({Key? key}) : super(key: key);
+  final bool? ticketbar2;
+  const ThicCont({Key? key, this.ticketbar2}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +12,7 @@ class ThicCont extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius:BorderRadius.circular(20) ,
 
-        border: Border.all(color: Colors.white,width: 2.5)
+        border: Border.all(color: ticketbar2==null?Colors.white:Colors.lightBlue,width: 2.5)
       ),
     );
   }
